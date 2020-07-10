@@ -1,0 +1,13 @@
+﻿@model IEnumerable<AspNet.Demo.EF.Ticket>
+
+<div class="col-md-12" style="text-align: left; padding-top:20px; padding-bottom: 20px; background-color: cadetblue;">
+    <ul style="list-style-type: none;">
+        @foreach (var ticket in Model)
+        {
+            <li>
+                <span style="font-weight: bold; color: white;">@ticket.Title</span> - 
+                <span style="text-decoration:dotted; font-style: italic;">@ticket.Description</span>
+            </li>
+        }
+    </ul> 
+</div> 

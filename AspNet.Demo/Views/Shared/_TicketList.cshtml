@@ -1,0 +1,11 @@
+﻿@model IEnumerable<AspNet.Demo.EF.Ticket>
+
+<div class="text-center main-div">
+    <ul>
+        @foreach (AspNet.Demo.EF.Ticket item in Model)
+        {
+            <li>@item.Title</li>
+        }
+    </ul>
+</div>
+        

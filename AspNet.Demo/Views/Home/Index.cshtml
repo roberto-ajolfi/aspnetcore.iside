@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    var title = "Tickets as Parameter";
+}
+
+    <div class="text-center">
+        <h1 class="display-4">Welcome</h1>
+        @{
+            foreach (string item in ViewBag.Strings)
+            {
+                <p><i class="fas fa-exclamation-circle"></i>&nbsp;From TestSvc: @item</p>
+            }
+        }
+        <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+        @*<partial name="_TicketList" model="ViewBag.Tickets" />*@
+        @*<div id="div1"></div>
+        <button class="btn btn-primary" id="reload">Refresh</button>*@
+        <vc:tickets></vc:tickets>
+        <email mail-to="roberto.ajolfi@icubed.it">Roberto Ajolfi</email>
+
+        @*<div email mail-to="roberto.ajolfi@icubed.it"></div>*@
+    </div>
+
+@section Scripts {
+    @*<script>
+        $(document).ready(function () {
+            $('#reload').on('click', function () {
+                alert('ci passo');
+                $("#div1").load("/home/updatepartial");
+            });
+        });
+    </script>*@
+}

@@ -1,0 +1,20 @@
+﻿@model AspNet.Demo.Models.TicketListViewModel
+
+<tr>
+    <td>
+        @Model.Id
+    </td>
+    <td>
+        @Model.IssueDate
+    </td>
+    <td style="background-color: coral;">
+        <a style="color: white;" asp-action="Details" asp-route-id="@Model.Id">@Model.Title</a>
+    </td>
+    <td>
+        @Model.Description
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) ///
+        @Html.ActionLink("Delete", "Delete", new { id = Model.Id })
+    </td>
+</tr>
